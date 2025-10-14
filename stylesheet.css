@@ -1,0 +1,23 @@
+.main-body{ 
+    margin: 0;;
+    background-color: beige;
+}
+
+.main-title{
+    display: block;
+    text-align: center;
+    justify-content: center;
+    background-color: lightblue;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    background-color: lightgreen;
+} 
+
+.Register-form{
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+}
