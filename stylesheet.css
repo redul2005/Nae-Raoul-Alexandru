@@ -1,7 +1,102 @@
 header{
-    background-color: #2c7280;
+    background-color: #a72b2b;
     padding: 10px;
+    text-align: center;    
+    color: white;
+
+} 
+
+nav a{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: inline-block;
     text-align: center;
-    margin: 0;
-    
+    background-color: black;
 }
+
+body{
+    font-family: 'Courier New', Courier;
+    margin: 0;
+    padding: 0;
+    background-color: #cab8b8;
+}
+
+section[class="introduction"]{
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+section[class="features"]{
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+section[class="stats"]{
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+section[class="GoToRegister"]{
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+section[class="newsletter"]{
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+section[class="auth-form"]{
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+}
+section[class="auth-form"] form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+section[class="auth-form"] label{
+    margin-top: 10px;
+    font-weight: bold;
+}
+section[class="auth-form"] input{
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+section[class="auth-form"] button{
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #a72b2b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+section[class="auth-form"] button:hover{
+    background-color: #8c2323;
+}
+
+section[class="auth-form"] p{
+    margin-top: 20px;
+} 
