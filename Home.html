@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProChecker - Home</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="styleHome.css">
 </head>
 <body>
 
-<header>
+<header id="top">
     <h1>Welcome to ProChecker</h1>
     <nav>
-        <a href="Home.html">Home</a>
         <a href="Login.html">Login</a>
         <a href="Register.html">Register</a>
         <a href="Dashboard.html">Dashboard</a>
@@ -17,12 +19,12 @@
 </header>
 
 <main>
-    <section id="introduction">
+    <section class="introduction">
         <h2>About ProChecker</h2>
         <p>ProChecker is your ultimate productivity companion. Track your tasks, manage your time, and achieve your goals with ease.</p>
     </section>
 
-    <section id="features">
+    <section class="features">
         <h2>Features</h2>
         <dl>
             <dt>Task Tracking</dt>
@@ -35,7 +37,7 @@
         <p>Explore more features to enhance your productivity.</p>
     </section>
 
-    <section id="stats">
+    <section class="stats">
         <h2>Keypoints</h2>
         <p>Here are why we are better than others</p>
         <table>
@@ -62,20 +64,21 @@
         </table>
     </section>
     
-    <section>
+    <section class="GoToRegister">
         <h2>You don't have an account?</h2>
         <p>Sign up now to enjoy all the features of ProChecker!</p>
         <a href="Register.html">Create an Account</a>
     </section>
 
-    <section id="newsletter">
+    <section class="newsletter">
         <h2>Stay updated</h2>
         <p>Stay subscribed to our newsletter for getting info about future discounts and platform updates</p>
         <form>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
             <button type="submit">Subscribe</button>
-        </form>
+            <button type="button" onclick="document.getElementById('top').scrollIntoView({behavior:'smooth'});">Go to top!</button>
+        </form> 
     </section>
 
 </main>

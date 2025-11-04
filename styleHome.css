@@ -1,0 +1,63 @@
+section[class="features"] dl{
+    font-weight: bold;
+    margin-left: 100px;
+    width: fit-content;
+    padding: 6px;
+}
+
+section[class="features"] dt{
+    margin-top: 28px;
+    font-size: 18px;
+}
+
+section[class="features"] dd{
+    margin-left: 20px;
+    margin-top: 8px;
+    font-size: 16px;
+}
+section[class="stats"] table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+section[class="stats"] th, section[class="stats"] td{
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+section[class="stats"] th{
+    background-color: #a1a1a1;
+    font-weight: bold;
+}
+
+section[class="GoToRegister"] a{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+section[class="GoToRegister"] a:hover{
+    background-color: #45a049;
+}
+
+section[class="newsletter"] form{
+    margin-top: 15px;
+}
+section[class="newsletter"] input{
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+section[class="newsletter"] button{
+    padding: 10px 20px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
