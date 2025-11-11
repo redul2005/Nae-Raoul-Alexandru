@@ -1,111 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ro">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProChecker - Dashboard</title>
-    <link rel="stylesheet" href="stylesheet.css">
-    <link rel="stylesheet" href="styleDashboard.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ProChecker — Dashboard</title>
+  <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-
-<header>
-    <h1>ProChecker</h1>
-    <nav>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">ProChecker</div>
+      <nav class="site-nav" aria-label="Main">
         <a href="Home.html">Home</a>
-    </nav>
-</header>
+      </nav>
+    </div>
+  </header>
 
-<main>
-    <section class="dashboard-intro">
-        <h2>Welcome to your Dashboard</h2>
-        <p>Here you can manage your tasks and track your progress.</p>
+  <main class="container">
+    <section class="card grid columns-2">
+      <div>
+        <h2>All-time Productivity</h2>
+        <p class="kicker">Overview of completed tasks and tracked hours.</p>
+
+        <section class="card">
+          <h3>Stats</h3>
+          <table>
+            <thead><tr><th>Metric</th><th>Value</th></tr></thead>
+            <tbody>
+              <tr><td>Tasks Completed</td><td>0</td></tr>
+              <tr><td>Hours Tracked</td><td>0</td></tr>
+              <tr><td>Goals Achieved</td><td>0</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="card">
+          <h3>Legend</h3>
+          <table>
+            <thead><tr><th>Symbol</th><th>Meaning</th></tr></thead>
+            <tbody>
+              <tr><td>✔️</td><td>Completed</td></tr>
+              <tr><td>❌</td><td>Incomplete</td></tr>
+              <tr><td>🔴</td><td>High</td></tr>
+              <tr><td>🔶</td><td>Medium</td></tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+
+      <aside>
+        <section class="card">
+          <h3>Quick Actions</h3>
+          <p class="kicker">Today: <span id="current-date" aria-hidden="true"></span></p>
+          <form class="form-stack" onsubmit="event.preventDefault()">
+            <input id="task-input" type="text" placeholder="Task title" aria-label="Task title">
+            <select id="importance-level" aria-label="Importance">
+              <option value="high">High</option>
+              <option value="medium" selected>Medium</option>
+              <option value="low">Low</option>
+            </select>
+            <input id="due-date" type="date" aria-label="Due date">
+            <textarea id="task-notes" placeholder="Notes..."></textarea>
+            <div class="actions">
+              <button class="btn" type="submit">Add task</button>
+              <button class="btn secondary" type="button" id="view-tasks-button">View tasks</button>
+            </div>
+          </form>
+        </section>
+      </aside>
     </section>
-    <section class="dashboard-legend">
-        <h2>Legend</h2>
-        <table>
-            <tr>
-                <th>Symbol</th>
-                <th>Meaning</th>
-            </tr>
-            <tr>
-                <td>✔️</td>
-                <td>Completed Task</td>
-            </tr>
-            <tr>
-                <td>❌</td>
-                <td>Incomplete Task</td>
-            </tr>
-            <tr>
-                <td>🔴</td>
-                <td>High importance task</td>
-            </tr>
-            <tr>
-                <td>🔶</td>
-                <td>Medium importance task</td>
-            </tr>
-            <tr>
-                <td>🔵</td>
-                <td>Low importance task</td>
-            </tr>
-            <tr>
-                <td>⏳</td>
-                <td>In-Progress Task</td>
-            </tr>
-            <tr>
-                <td>⏰</td>
-                <td>Overdue Task</td>
-            </tr>
-        </table>
-    </section>
+    <footer class="site-footer">© ProChecker</footer>
+  </main>
 
-
-    <section class="dashboard-stats">
-        <h2>All-time Productivity Stats</h2>
-        <p>Stay updated with your latest productivity metrics.</p>
-        <table>
-            <tr>
-                <th>Metric</th>
-                <th>Value</th>
-            </tr>
-            <tr>
-                <td>Tasks Completed</td>
-                <td>0</td>
-            </tr>
-            <tr>
-                <td>Hours Tracked</td>
-                <td>0</td>
-            </tr>
-            <tr>
-                <td>Goals Achieved</td>
-                <td>0</td>
-            </tr>
-        </table>
-    </section>
-
-    <section class="dashboard-actions">
-        <h2>Quick Actions</h2>
-        <p>Today is: <span id="current-date"></span></p>
-        <form>
-            <p>Set the task for today: <input type="text" placeholder="Enter your task" id="task-input"></p>
-            <p>Importance Level:
-                <select id="importance-level">
-                    <option value="high">High</option>
-                    <option value="medium">Medium</option>
-                    <option value="low">Low</option>
-                </select>
-            </p>
-            <p>Due Date: <input type="date" id="due-date"></p>
-            <p>Write down what's in your mind</p>
-            <textarea id="task-notes" rows="4" cols="50" placeholder="Additional notes..."></textarea>
-            <button type="submit">Add New Task</button>
-            <button type="button" id="view-tasks-button">View tasks</button>
-        </form>
-    </section>
-
-    
-
-</main>
-
+  <script>
+    document.addEventListener('DOMContentLoaded',()=>{
+      const el=document.getElementById('current-date');
+      if(el) el.textContent=new Date().toLocaleDateString(undefined,{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+    });
+  </script>
 </body>
 </html>

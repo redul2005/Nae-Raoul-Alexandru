@@ -6,38 +6,17 @@ section[class="dashboard-intro"], section[class="dashboard-legend"], section[cla
 }
 
 
-section[class="dashboard-stats"] table, section[class="dashboard-legend"] table{
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
+section.dashboard-stats table, section.dashboard-legend table{margin-top:12px}
 
-section[class="dashboard-stats"] th, section[class="dashboard-stats"] td, section[class="dashboard-legend"] th, section[class="dashboard-legend"] td{
-    border: 1px solid #ddd;
-    padding: 12px;
-    text-align: center;
-}
-
-section[class="dashboard-stats"] th, section[class="dashboard-legend"] th{
-    background-color: #a1a1a1;
-    font-weight: bold;
-}
-
+/* tables in dashboard */
+section.dashboard-stats th, section.dashboard-legend th{background:#a1a1a1}
 section[class="dashboard-actions"] form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 2px solid #ccc;
-    padding: 20px;
-    border-radius: 5px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  align-items:flex-start;
+  border:1px solid #e6e6e6;
+  padding:12px;
+  border-radius:6px;
 }
-
-section[class="dashboard-actions"] button{
-    padding: 10px 20px;
-    margin: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
+section[class="dashboard-actions"] button{padding:8px 12px;background:var(--accent);color:#fff;border:0;border-radius:6px;cursor:pointer}
