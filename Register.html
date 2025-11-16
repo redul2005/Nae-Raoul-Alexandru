@@ -1,43 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ro">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>ProChecker — Register</title>
-  <link rel="stylesheet" href="stylesheet.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register - ProChecker</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <div class="brand">ProChecker</div>
-      <nav class="site-nav" aria-label="Main">
-        <a href="Home.html">Home</a>
-        <a href="Login.html">Login</a>
-      </nav>
-    </div>
+  <a id="top"></a>
+  <header>
+    <h1>Register</h1>
+    <nav>
+      <a href="Home.html">Home</a>
+      <a href="Login.html">Login</a>
+    </nav>
   </header>
-
-  <main class="container">
-    <section class="card" style="max-width:520px;margin:0 auto">
-      <h2 class="center">Create account</h2>
-      <p class="kicker center">Simple sign-up — we only ask essentials for this demo.</p>
-
-      <form class="form-stack" method="post" action="fisier.php" autocomplete="off" novalidate>
-        <label for="username">Username</label>
-        <input id="username" name="username" type="text" required>
-
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" required>
-
-        <label for="password">Password</label>
-        <input id="password" name="password" type="password" required>
-
-        <div class="actions">
+  <main class="auth-container">
+    <div class="card auth-card">
+      <h1 class="text-center">Create an account</h1>
+      <form>
+        <label>Name
+          <input type="text" required>
+        </label>
+        <label>Email
+          <input type="email" required>
+        </label>
+        <label>Parolă
+          <input type="password" required>
+        </label>
+        <div style="margin-top:0.6rem; text-align:center">
           <button class="btn" type="submit">Register</button>
-          <a class="btn-link" href="Login.html">Have account?</a>
         </div>
       </form>
-    </section>
+    </div>
   </main>
+  <footer>
+    <p>&copy; 2025 ProChecker</p>
+  </footer>
+  <a href="#top" id="backToTop" class="back-to-top" aria-label="Mergi sus">⬆️ Mergi sus</a>
+  <script src="scripts.js"></script>
 </body>
 </html>
